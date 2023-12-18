@@ -1,0 +1,54 @@
+<!-- transactions table (section 3) -->
+<div>
+    <table>
+        <!-- table headers -->
+        <thead class="table-header">
+            <th *ngFor="let header of tableHeaders">
+                <div class="flex-only">
+                    {{header.title}}
+                    <div *ngIf="header.sort"> <i class="fa">&#xf0dc;</i></div>
+                </div>
+            </th>
+        </thead>
+
+        <!-- table content -->
+        <tbody>
+            <!-- arranging table data with type 'key'(string,number,date,... etc) -->
+            <tr *ngFor="let col of tableData">
+                <ng-container *ngFor="let row of tableHeaders">
+                    <td *ngIf="row.type==='date'">
+                        {{col[row.name] | date:'mediumDate'}}
+                    </td>
+                    <td *ngIf="row.type === 'string'">
+                        <!-- if image key is exist  -->
+                        <!-- <button class="name-icon" *ngIf="row.name =='image'">
+                            <img [src]=col[row.name] />
+                        </button>-->
+                        <!-- if image key is exist and it dont have value then making name as image  -->
+                        <!-- <button class="name-icon" *ngIf="row.name =='image'&& !col[row.name] && row.name =='name'">
+                            {{col[row.name] | name}}
+                        </button> -->
+                        <!-- with name key making into image -->
+                        <button class="name-icon" *ngIf="row.name =='name'">
+                            {{col[row.name] | name}}
+                        </button>
+                        {{col[row.name] }}
+                    </td>
+                    <td *ngIf="row.type==='status'">
+                        <button class="satus-button"> {{col[row.name]}}</button>
+                    </td>
+
+                    <td *ngIf="row.type==='time'">
+                        {{col[row.name] | date:'shortTime'}}
+                    </td>
+                    <td *ngIf="row.type === 'number'">
+                        ${{col[row.name]}}
+                    </td>
+                    <td *ngIf="row.type === 'action'">
+                        <img src="/assets/icons/menu.svg" />
+                    </td>
+                </ng-container>
+            </tr>
+        </tbody>
+    </table>
+</div>

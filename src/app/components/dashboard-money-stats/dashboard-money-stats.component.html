@@ -1,0 +1,41 @@
+<!-- money statistics section -->
+<div class="section-two">
+
+    <!-- money statistics section -->
+    <div class="card-header">
+        <label>Money Statistics</label>
+        <div class="flex">
+            <select value="monthly">
+                <option value="monthly">Monthly</option>
+            </select>
+            <img src="/assets/icons/menu.svg" />
+        </div>
+    </div>
+
+    <!-- total values section -->
+    <div class="total-values" *ngIf="moneyStatistics">
+        <div class="flex-only">
+            <div *ngFor="let key of moneyStatkeys;let i = index" class="money-stats"
+                [ngStyle]="{'padding-left.px': i != 0 ? 10 : 0}">
+                <label class="lighttext">{{key?.replace('_',' ')| titlecase}}</label>
+                <h4>${{moneyStatistics[key]?.value |number:'1.2-2' }}</h4>
+
+                <!-- svg icons section  -->
+                <div class="flex-only">
+                    <app-svg [color]="moneyStatistics[key]?.trend_color"></app-svg>
+                    <span class="fs-10" [ngStyle]="{ 'color': moneyStatistics[key]?.trend_color}">+</span>
+                    <span [ngStyle]="{ 'color': moneyStatistics[key]?.trend_color}">
+                        {{moneyStatistics[key]?.trend}}
+                    </span>
+                    <span class="lighttext status-text"> from last month</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- bar chart statistics -->
+        <div>
+            <app-canvas [chartData]="canvas" [chartBarColors]="barColors"></app-canvas>
+        </div>
+
+    </div>
+</div>

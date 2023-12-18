@@ -1,0 +1,16 @@
+<!-- transactions section -->
+<div class="section-three">
+    <!-- table above section  -->
+    <div class="card-header">
+        <label>Transaction History</label>
+        <div class="table-buttons">
+            <button><img src="/assets/icons/search.svg" /><input placeholder="Search" /></button>
+            <button><img src="/assets/icons/filter.svg" />Filter</button>
+            <button><img src="/assets/icons/export.svg" />Export</button>
+        </div>
+    </div>
+    <!-- table -->
+    <div>
+        <app-table [tableHeaders]="tableHeaders" [tableData]="transactions"></app-table>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+.sidemenu-container {
+    background: #dedede;
+    padding: 20px 10px 10px 10px;
+    position: fixed;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    top: 50px;
+
+    // profile and logo section
+    .logo,
+    .profile {
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 30px;
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+    }
+
+    .logo-icon {
+        font-size: 20px;
+    }
+
+    // list section
+    .menu-section {
+        padding: 10px;
+
+        .sub-menu-items {
+            padding: 10px 1px 10px 16px;
+
+            img {
+                margin-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--black) !important;
+            }
+        }
+
+        //sidemenu list active item
+        .sub-menu-items:hover {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+    }
+
+    // toggle section
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 15px;
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 1px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .round {
+            border-radius: 34px;
+        }
+
+        .round:before {
+            border-radius: 50%;
+        }
+    }
+
+    //drop section
+    .drop-box {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fab-button {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            color: var(--white);
+        }
+
+    }
+}

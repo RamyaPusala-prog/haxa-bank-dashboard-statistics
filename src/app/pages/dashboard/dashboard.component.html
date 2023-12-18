@@ -1,0 +1,10 @@
+<div class="dashboard-main">
+    <app-header *ngIf="showHeader" (handleClose)="showHeader=false"></app-header>
+    <div class="sub-items">
+        <app-sidebar></app-sidebar>
+        <div class="dashboard-content">
+            <app-sub-header></app-sub-header>
+            <app-dashboard-main></app-dashboard-main>
+        </div>
+    </div>
+</div>

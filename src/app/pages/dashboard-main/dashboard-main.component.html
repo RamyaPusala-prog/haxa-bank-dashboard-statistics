@@ -1,0 +1,20 @@
+<div class="dashboard-main">
+
+    <!-- left side card -->
+    <div class="dashboard-left-card">
+        <app-dashboard-static-content></app-dashboard-static-content>
+    </div>
+
+    <!-- right side card -->
+    <div class="dashboard-right-card">
+        <!-- total balance section -->
+        <app-dashboard-total-balance [balance]="balanceData"></app-dashboard-total-balance>
+
+        <!-- money statistics section -->
+        <app-dashboard-money-stats [moneyStatistics]="moneyStatsData" [canvas]="canvasData"></app-dashboard-money-stats>
+
+        <!-- transactions section -->
+        <app-dashboard-transactions [transactions]="transactionsData"></app-dashboard-transactions>
+
+    </div>
+</div>

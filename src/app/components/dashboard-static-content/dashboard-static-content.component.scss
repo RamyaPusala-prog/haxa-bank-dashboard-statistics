@@ -1,0 +1,75 @@
+// static card section
+.dashboard-static-card {
+
+    // card header section
+    .card-header {
+        .arrow-buttons {
+            .arrows {
+                font-size: 20px;
+                border-radius: 5px;
+            }
+
+            .left-arrow {
+                margin-right: 3px;
+            }
+        }
+    }
+
+    // card content section
+    .card-content {
+        .card-image {
+            width: 250px;
+            margin-left: 16px;
+        }
+
+        .card-item {
+            display: flex;
+            padding: 5px 0px;
+
+            .titles {
+                display: grid;
+                margin-left: 10px;
+            }
+        }
+
+        .list-view {
+            border: 1px solid var(--gray-light);
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+
+
+    }
+
+    // card buttons section
+    .actions {
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--gray-light);
+
+        .action {
+            flex: 1;
+            padding: 20px 10px;
+            text-align: center;
+            border-right: 1px solid #ccc;
+
+            p {
+                font-size: 12px !important;
+            }
+        }
+
+        .action:last-child {
+            border-right: none;
+        }
+    }
+
+    // card footer section
+    .card-footer {
+        .drop-box-main {
+            width: 210px;
+        }
+    }
+}

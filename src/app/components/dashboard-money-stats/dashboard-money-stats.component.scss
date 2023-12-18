@@ -1,0 +1,33 @@
+.section-two {
+
+    // card header section
+    .card-header {
+        select {
+            width: 100px;
+            border: 1px solid var(--gray-light);
+            border-radius: 10px;
+            height: 28px;
+            margin-right: 10px;
+            padding: 5px;
+        }
+    }
+
+    // total values section
+    .total-values {
+        margin-top: 10px;
+
+        .status-text {
+            margin-left: 2px;
+        }
+
+        .money-stats {
+            border-right: 1px solid var(--lightgray-text);
+            padding-right: 30px;
+        }
+
+        .money-stats:last-child {
+            border: none;
+        }
+    }
+
+}

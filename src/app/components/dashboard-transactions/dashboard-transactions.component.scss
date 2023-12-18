@@ -1,0 +1,17 @@
+// table above buttons
+.table-buttons {
+    display: flex;
+
+    input {
+        width: 45px;
+    }
+
+    button {
+        margin-right: 5px;
+        align-items: center;
+        display: flex;
+        background: none;
+        border: 1px solid var(--lightgray-text);
+        border-radius: 5px;
+    }
+}

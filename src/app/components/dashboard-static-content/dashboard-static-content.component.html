@@ -1,0 +1,75 @@
+<!-- dashboard main content left static section -->
+<div class="dashboard-static-card">
+
+    <!-- atm card section -->
+    <div>
+        <div class="card-header">
+            <div>
+                <label>My Cards: 1</label><span class="fs-10 lighttext">/2</span>
+            </div>
+            <div class="arrow-buttons">
+                <button class="arrows left-arrow "><i class="fa">&#xf104;</i></button>
+                <button class="arrows"> <i class="fa">&#xf105;</i></button>
+            </div>
+        </div>
+        <div class="card-content">
+            <img src="/assets/images/card-image.jpg" class="card-image" />
+        </div>
+        <div class="card-footer">
+            <div class="drop-box drop-box-main">
+                <button class="fab-button">+</button> New Payment
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <!-- quick actions section-->
+    <div class="card-main">
+        <div class="card-header">
+            <label>Quick Actions</label>
+        </div>
+        <div class="card-content actions">
+            <div class="action">
+                <img src="/assets/icons/addbox.svg" />
+                <p>Top up</p>
+            </div>
+            <div class="action">
+                <img src="/assets/icons/send.svg" />
+                <p>Transfer</p>
+            </div>
+            <div class="action">
+                <img src="/assets/icons/withdrawl.svg" />
+                <p>Withdrawal</p>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <!-- saving paln section -->
+    <div class="card-main">
+        <div class="card-header">
+            <label>Saving Plan</label>
+            <button><img src="assets/icons/add-circle.svg" /></button>
+        </div>
+        <div class="card-content" *ngFor="let item of listItems">
+            <div class="list-view">
+                <div class="card-item flex">
+                    <div class="flex-only">
+                        <button><img [src]=item.image /></button>
+                        <div class="titles">
+                            <label>{{item.name}}</label>
+                            <span>Target ${{item.targetValue}}</span>
+                        </div>
+                    </div>
+                    <button><img src="assets/icons/menu.svg" /></button>
+                </div>
+                <div class="flex">
+                    <label class="fs-10">Total:${{item.totalValue}}</label>
+                    <label class="fs-10">{{item.totalPercentage}}%</label>
+                </div>
+                <progress [value]=item.tillDateValue [max]=item.maxValue> </progress>
+            </div>
+        </div>
+    </div>
+
+</div>

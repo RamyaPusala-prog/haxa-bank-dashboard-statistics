@@ -1,0 +1,24 @@
+.header-main {
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+
+    h4 {
+        color: var(--white)
+    }
+
+    .header-close {
+        position: absolute;
+        right: 1.4em;
+        cursor: pointer;
+    }
+
+    i {
+        color: var(--white);
+    }
+}

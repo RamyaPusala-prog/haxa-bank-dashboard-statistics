@@ -1,0 +1,24 @@
+.dashboard-main {
+    height: 100vh;
+    .sub-items {
+        display: flex;
+
+        app-sidebar {
+            width: 22%;
+            height: 100vh;
+        }
+
+        app-sub-header {
+            z-index: 1 !important;
+        }
+
+        .dashboard-content {
+            // width: 100%;
+            margin-top: 60px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+    }
+
+
+}

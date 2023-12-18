@@ -1,0 +1,23 @@
+<!-- total balance section -->
+<div class="section-one" *ngIf="balance">
+    <div class="flex">
+        <label class="fb-w">Total Balance</label>
+        <div>
+            <img src="assets/icons/menu.svg" />
+        </div>
+    </div>
+    <div>
+        <h2>${{balance?.total_balance| number:'1.2-2'}}</h2>
+    </div>
+    <!-- progress bar section -->
+    <progress value="40" max="100"></progress>
+
+    <!-- progree bar values -->
+    <div class="flex footer">
+        <span class="lighttext">Monthly payment Limit</span>
+        <div>
+            <span>${{balance?.payment_done_so_far|number:'1.0-0'}}</span>
+            <span class="lighttext">/${{balance?.monthly_payment_limit | number:'1.0-0'}}</span>
+        </div>
+    </div>
+</div>

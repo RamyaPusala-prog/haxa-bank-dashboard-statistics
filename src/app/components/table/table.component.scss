@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+    height: 172px;
+    // display: block;
+    // overflow-y: scroll;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.satus-button {
+    color: var(--green);
+}
+
+.table-header {
+    background-color: var(--gray-light);
+
+    .fa {
+        margin-left: 5px;
+    }
+}
+
+.name-icon {
+    border-radius: 15px;
+    width: 33px;
+    height: 32px;
+    background-color: var(--lightgray-text);
+    color: var(--white)
+}
